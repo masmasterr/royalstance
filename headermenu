@@ -1,0 +1,62 @@
+span.mobile_menu_bar:before {
+    color: grey !important;
+}
+
+         /* Full height slide-in menu that comes from the right */
+    @media only screen and (max-width: 980px) {
+      .mobile_nav.opened .mobile_menu_bar:before {
+        content: "d";
+      }
+      #main-header .container.clearfix.et_menu_container {
+        width: 100%;
+      }
+      .logo_container {
+        padding-left: 30px;
+      }
+      #et-top-navigation {
+        padding-right: 30px;
+      }
+      .mobile_menu_bar, #logo {
+        z-index: 10000;
+      }
+      #mobile_menu {
+        display: block !important;
+        right: 0;
+        left: auto;
+        top: 0;
+        padding-top: 80px;
+        min-height: 100vh;
+        width: 400px;
+        border-top: none;
+        transition: all .2s ease-in-out;
+        transform-origin: right;
+      }
+      .mobile_nav.closed #mobile_menu {
+        transform: rotateY(90deg);
+        opacity: 0;
+      }
+      .mobile_nav.opened #mobile_menu {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      #mobile_menu {
+        width: 100%;
+      }
+    }
+
+#et-secondary-menu {
+    display: block!important;
+}
+@media screen and (max-width: 767px) {
+    #et-secondary-menu {
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    #main-header {
+        display: none!important;
+   }
+}
